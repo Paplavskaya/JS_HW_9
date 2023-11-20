@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+.app {
+    max-width: 1200px;
+    width: 90%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Manrope';
+    font-weight: bold;
+    color: #152f57;
+    cursor: pointer;
+}
+
+.todo {
+    width: 350px;
+    font-family: 'Manrope';
+    background: #c4d5f1;
+    box-shadow: 0 10px 20px gray;
+    border-radius: 10px;
+    color: #152f57;
+}
+
+.todo__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.todo__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;    
+    width: 100%;
+}
+
+.todo__title {
+    font-weight: 800;
+    background-color: #152f57;
+    color: #fff;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.todo__input,
+.todo__edit__input {
+    outline: none;
+    border: none;
+    padding-left: 5px;
+    height: 35px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Manrope';
+    color: #152f57;    
+}
+
+.todo__input {
+    width: 90%;
+}
+
+.all__btns {
+    display: flex;
+    gap: 10px;
+}
+
+.empty__resalt {
+    text-align: center;
+}
+
+.todo__body {
+    margin-bottom: 30px;
+    width: 90%;    
+}
+
+.todo__tasks {
+    list-style: none;
+    display: flex;  
+    flex-direction: column;
+    gap: 20px;  
+}
+
+.todo__task {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    align-items: center;    
+}
+
+.todo__checkbox {
+    width: 15px;
+    height: 15px;
+}
+
+.todo__task__content {
+    text-transform: uppercase;
+    font-weight: bold;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.todo__btn {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+.todo__delete__btn,
+.todo__edit__cancel {
+    margin-right: 10px;
+}
+
+.todo__edit__input{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.isDone .todo__task__content {
+    text-decoration: line-through;
+    color: #fff;
+}
